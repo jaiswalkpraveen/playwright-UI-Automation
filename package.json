@@ -1,7 +1,7 @@
 {
   "name": "playwright-sample",
   "version": "1.0.0",
-  "description": "Playwright tests for Privilee website",
+  "description": "Playwright UI tests for Privilee website",
   "main": "test.spec.js",
   "scripts": {
     "test": "npx playwright test"

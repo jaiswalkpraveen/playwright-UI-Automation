@@ -27,6 +27,6 @@ jobs:
       - name: Upload test report (optional)
         uses: actions/upload-artifact@v3
         with:
-          name: test-report
+          name: playwright-test-report
           path: ./test-reports/html/index.html
           retention-days: 30
