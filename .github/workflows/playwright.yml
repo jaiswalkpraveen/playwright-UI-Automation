@@ -9,14 +9,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm install
 
-      - name: Run tests
-        run: npm run test
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npx playwright test
 
       - name: Upload test report (optional)
         uses: actions/upload-artifact@v3
         with:
           name: test-report
           path: ./test-reports/html/index.html
+          retention-days: 30
