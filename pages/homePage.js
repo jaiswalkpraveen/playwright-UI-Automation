@@ -4,6 +4,7 @@ class HomePage {
       this.images = page.locator('img'); // Selects all images on the page
       this.headers = page.locator('h3'); // Selects all h3 elements
       this.spans = page.locator('span'); // Selects all span elements
+      this.joinButton = page.locator('text=Join Privilee today!');
     }
 
     async navigate() {
@@ -73,6 +74,10 @@ class HomePage {
           }));
         });
       }
+
+      async clickJoinButton() {
+        await this.joinButton.click();
+    }
       
   }
   

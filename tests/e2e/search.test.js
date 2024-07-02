@@ -38,23 +38,3 @@ test.describe('Search Functionality', () => {
     });
   }
 });
-
-
-// // test('should filter search results by location', async () => {
-// //     await searchPage.performSearch('Beach');
-
-// //     // Assuming there's a location filter dropdown
-// //     const locationFilter = searchPage.page.locator('#location-filter');
-// //     await locationFilter.selectOption('Dubai');
-
-// //     // Wait for results to update
-// //     await searchPage.page.waitForSelector('.search-results');
-
-// //     // Check if all visible results are in Dubai
-// //     const resultItems = await searchPage.page.locator('.result-item:visible');
-// //     const count = await resultItems.count();
-// //     for (let i = 0; i < count; i++) {
-// //       const location = await resultItems.nth(i).locator('.location').innerText();
-// //       expect(location).toBe('Dubai');
-// //     }
-// //   });
