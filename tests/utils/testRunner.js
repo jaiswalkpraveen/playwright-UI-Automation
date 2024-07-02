@@ -20,16 +20,7 @@ exports.test = base.test.extend({
     await homePage.navigate();
     await use(homePage);
     await page.close();
-  },
-  signUpPage: async ({ browser }, use) => {
-    const context = await browser.newContext();
-    await context.grantPermissions(['geolocation']);
-    const page = await context.newPage();
-    const signUpPage = new SignUpPage(page);
-    await signUpPage.navigate();
-    await use(signUpPage);
-    await page.close();
-  },
+  }
 });
 
 exports.expect = base.expect;
