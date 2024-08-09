@@ -1,4 +1,4 @@
-# Privilee UI Test Automation
+# UI Test Automation
 This project is an UI automation framework for testing Privilee maps page. It uses Playwright, Javascript and follows the Page Object Model design pattern.
 
 ## Tools and Technologies
